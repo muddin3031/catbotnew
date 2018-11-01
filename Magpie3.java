@@ -45,9 +45,20 @@ public class Magpie3
 		{
 			response = "Tell me more about your family.";
 		}
+		else if(findKeyword(statement, "cat") >= 0
+				|| findKeyword(statement, "dog") >= 0
+				|| findKeyword(statement, "fish") >= 0
+				|| findKeyword(statement, "bird") >= 0)
+		{
+			response="I see that you like animals. Do you have a pet? If so tell me more";
+		}
+		else if(findKeyword(statement, "Folwell") >= 0)
+		{
+			response="He's a really nice teacher";
+		}
 		else
 		{
-			response = getRandomResponse();
+			response=getRandomResponse();
 		}
 		return response;
 	}
